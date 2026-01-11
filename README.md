@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# Alloy Markdown Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A professional, modern, and beautiful Markdown viewer designed for clarity and focus.
 
-Currently, two official plugins are available:
+![Alloy Markdown Viewer](https://raw.githubusercontent.com/sahabajalam/alloymarkdown/main/public/vite.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Alloy Markdown Viewer** transforms your raw Markdown files into elegant, readable documents with advanced support for code, mathematics, and tables. Built with a focus on aesthetics and user experience, it features a glassmorphic design, dynamic backgrounds, and perfect contrast across multiple themes.
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **🎨 Stunning UI/UX**:
+    *   **Glassmorphism**: Modern, translucent headers and footers using `backdrop-filter`.
+    *   **Dynamic Backgrounds**: Subtle, animated gradients that breathe life into the application.
+    *   **Responsive Design**: A 2-column layout on desktop that gracefully adapts to a stacked layout on mobile.
+    *   **Smart Layout**: An "app-like" experience with a fixed shell and independently scrollable content area.
 
-## Expanding the ESLint configuration
+*   **🌓 Multi-Theme Support**:
+    *   **Light**: Clean, slate-based palette for day-to-day use.
+    *   **Dark**: Deep "OLED-black" theme for low-light environments.
+    *   **Book**: A warm, sepia-toned theme optimized for long reading sessions.
+    *   *All themes feature carefully tuned contrast ratios for maximum readability.*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*   **⚡ Advanced Rendering**:
+    *   **GitHub Flavored Markdown (GFM)**: Full support for standard markdown features.
+    *   **Math Equations**: Beautiful rendering of LaTeX math equations using `KaTeX`, with custom styling for high visibility.
+    *   **Syntax Highlighting**: Theme-aware code blocks support for dozens of languages.
+    *   **Tables**: Professionally styled tables with striped rows and hover effects.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+*   **🛠️ Practical Utilities**:
+    *   **Drag & Drop Upload**: Simply drag your `.md` files to view them instantly.
+    *   **Smart Navbar**: Automatically hides when you scroll down to maximize reading space, and reappears when you scroll up.
+    *   **One-Click Reset**: Click the logo to instantly return to the upload screen.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **Frontend Framework**: [React](https://reactjs.org/) (v18+)
+*   **Language**: [TypeScript](https://www.typescriptlang.org/)
+*   **Build Tool**: [Vite](https://vitejs.dev/)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+*   **Markdown Parsing**: `react-markdown`, `remark-gfm`, `remark-math`
+*   **Math Rendering**: `rehype-katex`
+*   **Icons**: [Lucide React](https://lucide.dev/)
+*   **Fonts**: `Inter` (UI) and `JetBrains Mono` (Code) via Google Fonts.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To get started with Alloy Markdown Viewer locally, follow these steps:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/sahabajalam/alloymarkdown.git
+    cd alloymarkdown
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in your browser**:
+    Navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 📖 Usage
+
+1.  **Upload a File**: Drag and drop a `.md` file onto the upload zone, or click to select one from your computer.
+2.  **Toggle Themes**: Use the sun/moon/book icon in the header to switch between Light, Dark, and Book modes.
+3.  **Navigation**: Scroll down to read. The navbar will hide to give you more space. Scroll up to bring it back. Click the **Alloy Markdown** logo to close the current file and upload a new one.
+
+## 🤝 Credits
+
+Designed for **Clarity** & **Focus** with [Google Antigravity](https://deepmind.google).
+
+---
+
+&copy; 2026 Alloy Markdown Viewer. All rights reserved.
