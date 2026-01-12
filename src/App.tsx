@@ -5,6 +5,7 @@ import ThemeToggle from './components/ThemeToggle';
 import { RotateCcw, Github } from 'lucide-react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import logo from './assets/logo.svg';
 
 function cn(...inputs: (string | undefined | null | false)[]) {
   return twMerge(clsx(inputs));
@@ -67,12 +68,7 @@ function App() {
             onClick={() => setMarkdown(null)}
             title="Return to Home"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)] to-purple-600 rounded-xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="w-10 h-10 bg-gradient-to-br from-[var(--accent)] to-indigo-600 rounded-xl shadow-lg flex items-center justify-center text-white relative z-10 transition-transform duration-300 group-hover:scale-105 overflow-hidden">
-                <img src="/vite.svg" alt="Logo" className="w-6 h-6" />
-              </div>
-            </div>
+            <img src={logo} alt="Logo" className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
             <div className="flex flex-col">
               <h1 className="text-xl font-bold tracking-tight text-[var(--text-primary)] leading-none group-hover:text-[var(--accent)] transition-colors">
                 Alloy Markdown
@@ -100,7 +96,9 @@ function App() {
               </button>
             ) : (
               <a
-                href="#"
+                href="https://github.com/sahabajalam/alloymarkdown"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg transition-all
                   text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
               >
@@ -177,7 +175,7 @@ function App() {
           <footer className="flex-none py-6 border-t border-[var(--border-color)] bg-[var(--bg-primary)]/50 backdrop-blur-sm mt-auto">
             <div className="container mx-auto px-4 text-center">
               <p className="text-xs md:text-sm font-medium text-[var(--text-secondary)]">
-                Designed for <span className="text-[var(--text-primary)] font-bold">Clarity</span> & <span className="text-[var(--text-primary)] font-bold">Focus</span> with <a href="https://deepmind.google" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">Google Antigravity</a>
+                Designed for <span className="text-[var(--text-primary)] font-bold">Clarity</span> & <span className="text-[var(--text-primary)] font-bold">Focus</span> with <a href="https://antigravity.google/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">Google Antigravity</a>
               </p>
             </div>
           </footer>
